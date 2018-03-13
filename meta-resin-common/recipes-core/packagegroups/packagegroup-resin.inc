@@ -12,6 +12,7 @@ RDEPENDS_${PN} = " \
     ${RESIN_REGISTER} \
     rsync \
     kernel-modules \
+    os-config \
     os-release \
     less \
     "
