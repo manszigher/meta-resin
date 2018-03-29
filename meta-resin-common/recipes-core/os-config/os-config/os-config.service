@@ -1,0 +1,14 @@
+[Unit]
+Description=OS configuration service
+Requires=resin-boot.service
+Wants=NetworkManager.service
+After=resin-boot.service NetworkManager.service
+
+[Service]
+Type=simple
+Restart=on-failure
+RestartSec=10
+ExecStart=/usr/bin/os-config
+
+[Install]
+WantedBy=multi-user.target
